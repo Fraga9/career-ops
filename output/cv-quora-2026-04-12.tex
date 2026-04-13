@@ -1,0 +1,83 @@
+\documentclass{resume}
+\usepackage[left=0.4in,top=0.4in,right=0.4in,bottom=0.4in]{geometry}
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Héctor Eduardo Garza Fraga}
+\address{
+    +52 81 1299 5975 \ $\cdot$ \ Monterrey, MX \ $\cdot$ \ \href{mailto:garzahector1013@gmail.com}{garzahector1013@gmail.com}
+}
+\address{
+    \href{https://www.linkedin.com/in/osifraga/}{LinkedIn} \ $\cdot$ \
+    \href{https://github.com/Fraga9}{GitHub} \ $\cdot$ \
+    \href{https://osifraga.dev/}{Portfolio}
+}
+\begin{document}
+
+\begin{rSection}{Education}
+{\bf B. S. Computer Science and Technology}, Tecnológico de Monterrey \hfill {Aug 2022 - June 2026 (Expected)}\\
+\textit{Concentration in Advanced Artificial Intelligence for Data Science}\\
+{\bf Honors \& Achievements:} 100\% Academic Merit Scholarship, Xignux Challenge 2024, Top 3 Finalist
+\end{rSection}
+
+\begin{rSection}{Skills}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+AI / ML & LangChain, LLM Prompt Engineering, RAG Systems, PyTorch, Graph Neural Networks, Qdrant \\
+Languages & Python, JavaScript, C++, SQL \\
+Frameworks & FastAPI, Next.js, React, SvelteKit \\
+Tools & PostgreSQL, Supabase, AWS, Docker, GitHub Actions
+\end{tabular}
+\end{rSection}
+
+\begin{rSection}{Experience}
+\textbf{Full Stack Developer Intern, Cemex} \hfill {Feb 2025 - Present} \\
+{\small Next.js, FastAPI, PostgreSQL, Supabase, LangChain, Mapbox, Python}
+\begin{itemize}
+    \item Architected MOV, a production fleet intelligence platform managing 282 vehicles across 60+ branches with real-time anomaly detection, vehicle registry, maintenance tracking, and role-based access control.
+    \item Engineered an LLM-driven SQL agent enabling natural-language queries over fleet operations data, reducing ad-hoc reporting turnaround from hours to seconds—directly applicable to production LLM system design at scale.
+    \item Built intelligent anomaly detection system: fuel theft detection using statistical analysis (90\%+ precision), continuous speed violation monitoring with per-vehicle thresholds enforced over live GPS streams.
+\end{itemize}
+\textbf{AI Engineer Intern, Infosys (InStep)} \hfill {Jun 2024 - Aug 2024} \\
+{\small LLM, Semantic Search, AI Agents, Python, React}
+\begin{itemize}
+    \item Developed a semantic caching system integrated with EdgeVerve chatbot for PDF data retrieval, reducing process time by 90\%—demonstrates understanding of retrieval optimization and LLM system efficiency.
+    \item Engineered a multi-agent orchestration system enabling dynamic task creation with personalized dashboards, deployed for internal teams at Infosys EdgeVerve.
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Projects}
+
+% --- MOV (QUORA FOCUS) ---
+\textbf{MOV — Cemex Fleet Intelligence Platform} {Next.js, FastAPI, PostgreSQL, LangChain, Mapbox, Python} \hfill \href{https://github.com/Fraga9/MOV-fleet}{GitHub}
+\begin{itemize}
+    \item \textbf{LLM-Powered SQL Agent:} Engineered production LLM agent translating natural-language fleet queries into optimized SQL. Handles context management, few-shot examples, and tool use. Reduces reporting turnaround from hours to seconds.
+    \item \textbf{Scale \& Reliability:} Manages 282 vehicles across 60+ branches in production. Real-time data pipeline: PostgreSQL → FastAPI → LLM inference → SQL execution with error handling and fallbacks.
+    \item \textbf{Anomaly Detection:} Fuel theft detection (90\%+ precision) and speed violation monitoring over live GPS streams. Statistical baselines + threshold monitoring for real-time alerting.
+\end{itemize}
+
+% --- VIBEMATCH (OPTIMIZATION FOCUS) ---
+\textbf{VibeMatch: AI Music Recommendation Engine} {Next.js 15, FastAPI, PyTorch, Qdrant} \hfill \href{https://www.vibematchs.me/}{Live Demo}
+\begin{itemize}
+    \item \textbf{Production ML Optimization:} Engineered recommendation engine using Graph Neural Networks (LightGCN) achieving 1.0 Precision@10 and 0.64 Recall@10 over 338K+ tracks and 6.9K+ artists.
+    \item \textbf{Latency Engineering:} Architected real-time vector search with Qdrant and HNSW indexing, reducing query latency from 50ms → 10ms (99th percentile). End-to-end processing optimized to 800ms.
+    \item \textbf{Production Deployment:} AWS backend + Vercel frontend with 99.9\% uptime, automatic failover, rate limiting, and CI/CD automation. Shipped to real users, live for 6+ months.
+\end{itemize}
+
+% --- NEOLEO RUTA (NLU + RAG) ---
+\textbf{Neoleo Ruta — AI Transit Router} {SvelteKit 2, Gemini 2.5 Flash, Supabase pgvector, Python} \hfill {Shipping April 2026}
+\begin{itemize}
+    \item \textbf{End-to-End AI System:} NLU pipeline (regex + Gemini entity extraction) → semantic search via pgvector (RAG-style context retrieval) → RAPTOR multimodal routing → streaming NLG response.
+    \item \textbf{NLU in Production:} Parses natural-language transit requests ("Get me from Barrio Antiguo to Santa Fe, avoiding metro") into structured routing constraints. Handles ambiguity, modality selection, constraint extraction.
+    \item \textbf{Real-Time Multimodal Routing:} Integrates bus, metro, bike, and car modalities. Streaming response generation via Gemini for real-time user feedback.
+\end{itemize}
+
+% --- SMARTCOLONIA (SCALE FOCUS) ---
+\textbf{SmartColonia: Neighborhood Management SaaS} {FastAPI, React Native, PostgreSQL, AWS S3} \hfill {Beta, 200+ Users}
+\begin{itemize}
+    \item \textbf{Multi-Tenant at Scale:} Designed system supporting multiple independent neighborhoods. Scaled to 200 active beta users with strong retention.
+    \item \textbf{Full-Stack Ownership:} Backend (FastAPI multi-tenancy, payment integration, real-time notifications) + Mobile Frontend (React Native cross-platform). Role-based access control (Security Guards, Residents, Admins).
+    \item \textbf{SaaS Business Model:} Projected growth to 1,000 users within 6 months. Managing real payment flows, community engagement features, user retention.
+\end{itemize}
+
+\end{rSection}
+
+\end{document}

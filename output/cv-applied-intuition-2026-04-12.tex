@@ -1,0 +1,89 @@
+\documentclass{resume}
+\usepackage[left=0.4in,top=0.4in,right=0.4in,bottom=0.4in]{geometry}
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Héctor Eduardo Garza Fraga}
+\address{
+    +52 81 1299 5975 \ $\cdot$ \ Monterrey, MX \ $\cdot$ \ \href{mailto:garzahector1013@gmail.com}{garzahector1013@gmail.com}
+}
+\address{
+    \href{https://www.linkedin.com/in/osifraga/}{LinkedIn} \ $\cdot$ \
+    \href{https://github.com/Fraga9}{GitHub} \ $\cdot$ \
+    \href{https://osifraga.dev/}{Portfolio}
+}
+\begin{document}
+
+\begin{rSection}{Education}
+{\bf B. S. Computer Science and Technology}, Tecnológico de Monterrey \hfill {Aug 2022 - June 2026 (Expected)}\\
+\textit{Concentration in Advanced Artificial Intelligence for Data Science}\\
+{\bf Honors \& Achievements:} 100\% Academic Merit Scholarship, Xignux Challenge 2024, Top 3 Finalist
+\end{rSection}
+
+\begin{rSection}{Skills}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Applied AI & LLM agents, anomaly detection, real-time inference, ML systems \\
+Languages & Python, JavaScript, C++, SQL, Kotlin \\
+Full-Stack & FastAPI, Next.js, React, React Native, SvelteKit, PostgreSQL \\
+Problem-Solving & Customer discovery, requirements elicitation, prototyping, iteration
+\end{tabular}
+\end{rSection}
+
+\begin{rSection}{Experience}
+\textbf{Full Stack Developer Intern, Cemex} \hfill {Feb 2025 - Present} \\
+{\small Next.js, FastAPI, PostgreSQL, Supabase, LangChain, Mapbox, Python}
+\begin{itemize}
+    \item \textbf{Problem Discovery to Shipped Product:} Identified fleet management pain points (ad-hoc reporting taking hours, fuel fraud detection unreliable). Built MOV platform (282 vehicles, 60+ branches) addressing these with LLM-driven SQL agent and statistical anomaly detection.
+    \item \textbf{Deployed AI Solution at Scale:} Engineered intelligent fuel theft detection (90\%+ precision), speed violation monitoring, natural-language fleet analytics. Product actively used by 60+ branch managers.
+    \item \textbf{Iterative Refinement:} Gathered feedback from real users. Prioritized features based on highest-impact pain points. Deployed incremental improvements with zero downtime.
+\end{itemize}
+\textbf{AI Engineer Intern, Infosys (InStep)} \hfill {Jun 2024 - Aug 2024} \\
+{\small LLM, Semantic Search, AI Agents, Python, React}
+\begin{itemize}
+    \item Solved PDF data retrieval bottleneck (process time 90\%+ slower than needed) with semantic caching system. Deployed to Infosys EdgeVerve teams.
+    \item Engineered multi-agent system enabling team members to automate previously manual task creation and monitoring.
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Projects}
+
+% --- MOV (APPLIED AI) ---
+\textbf{MOV — Cemex Fleet Intelligence Platform} {Next.js, FastAPI, PostgreSQL, LangChain, Mapbox, Python} \hfill \href{https://github.com/Fraga9/MOV-fleet}{GitHub}
+\begin{itemize}
+    \item \textbf{Real-World Problem Solving:} Fleet managers lacked real-time visibility into vehicle performance, fuel efficiency, driver safety. Built end-to-end platform: vehicle registry, fuel transaction analysis, GPS monitoring, automated alerting.
+    \item \textbf{Applied AI Components:} LLM-driven SQL agent (fleet managers ask natural questions; agent converts to queries). Statistical anomaly detection (fuel theft via consumption pattern analysis; speed violations via GPS stream monitoring). Real-time alerting with evidence (anomaly graph, historical context).
+    \item \textbf{Customer Impact:} Reduced ad-hoc reporting turnaround from hours to seconds. Detected fuel fraud with 90\%+ precision. Deployed to 60+ branch managers across Cemex operations. Ongoing feature development driven by user feedback.
+    \item \textbf{Production Reliability:} Handles 282 vehicles in production. Sub-second queries. Real-time data freshness (live GPS, hourly fuel updates). Error recovery for missing data, sensor failures, network issues.
+\end{itemize}
+
+% --- VIBEMATCH (SHIPPED PRODUCT) ---
+\textbf{VibeMatch: AI Music Recommendation Engine} {Next.js 15, FastAPI, PyTorch, Qdrant} \hfill \href{https://www.vibematchs.me/}{Live Demo}
+\begin{itemize}
+    \item \textbf{End-to-End Product Development:} Identified problem: music discovery requires manually exploring artists. Built AI solution: Graph Neural Networks (LightGCN) learning collaborative filtering patterns from 2M+ play relationships. Deployed to real users.
+    \item \textbf{Applied Performance Optimization:} Achieved 1.0 Precision@10 (perfect top-10 ranking accuracy) through embedding tuning. Optimized vector search from 50ms to 10ms (5x speedup) via HNSW indexing. End-to-end latency: 800ms (user perceives as instant).
+    \item \textbf{Shipped, Live, Maintained:} Product live for 6+ months. 99.9\% uptime. Weekly model retraining. Ongoing monitoring and performance tuning. User feedback drives feature iterations (animated UX, Spotify integration, recommendation diversity).
+\end{itemize}
+
+% --- SMARTCOLONIA (MVVM) ---
+\textbf{SmartColonia: Neighborhood Management SaaS} {FastAPI, React Native, PostgreSQL, AWS S3} \hfill {Beta, 200+ Users}
+\begin{itemize}
+    \item \textbf{SaaS Problem-Solving:} Neighborhoods lack efficient communication, access control, payment processing. Built multi-tenant platform: resident portals, security guard dashboards, admin control panels. Real-time announcements, surveys, payment integration.
+    \item \textbf{Product-Market Fit Signals:} Scaled from 0 to 200 active beta users. Strong retention (communities are sticky). Projected growth to 1,000 users within 6 months.
+    \item \textbf{Full-Stack Implementation:} Backend: multi-tenant architecture, payment processing, real-time notifications, PostgreSQL design. Frontend: React Native cross-platform, role-based UI rendering. Deployment and ops: AWS hosting, user support, feature iteration.
+\end{itemize}
+
+% --- NEOLEO RUTA (TRANSIT PROBLEM) ---
+\textbf{Neoleo Ruta — AI Transit Router} {SvelteKit 2, Gemini 2.5 Flash, Supabase pgvector, Python} \hfill {Shipping April 2026}
+\begin{itemize}
+    \item \textbf{Real-World Transit Problem:} Monterrey commuters lack integrated multi-modal transit information. Shipping: AI-powered router converting natural-language queries ("Get me from Barrio Antiguo to Santa Fe, avoiding metro peak hours") into optimized routing recommendations across bus, metro, bike, car.
+    \item \textbf{Applied AI Layers:} NLU (entity extraction: stations, modalities, constraints). Semantic search (route similarity retrieval). Multimodal optimization (RAPTOR algorithm). Real-time response generation (streaming NLG).
+    \item \textbf{Production Constraints:} Real-time latency critical. Must handle missing schedule data, transit service disruptions. Error-resilient with graceful fallbacks.
+\end{itemize}
+
+\end{rSection}
+
+\begin{rSection}{Recognition}
+\item Xignux Challenge 2024: Top 3 Finalist—recognized for applied solutions to real problems
+\item 100\% Academic Merit Scholarship
+\end{rSection}
+
+\end{document}
