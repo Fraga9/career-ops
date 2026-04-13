@@ -35,3 +35,26 @@ node_modules/
 .claude/settings.local.json
 .claude/memory/
 career-dashboard
+
+# Sensitive data (never commit)
+*.env
+*.env.local
+.env*
+secrets.yml
+credentials.json
+api-keys.txt
+interview-prep/notes-private.md
+cv.md
+article-digest.md
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temp files
+temp/
+tmp/
+*.tmp
